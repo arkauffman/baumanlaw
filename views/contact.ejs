@@ -1,64 +1,35 @@
-<%- include('./_partials/header') %>
+<%- include('./header') %>
 
-<!-- <form method="POST" action="/settings?_method=PUT">
-  <div class="input-group input-group-lg">
-    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-    <input id="addressSearch" name="name" class="form-control" placeholder="Name">
-  </div>
-  <div class="input-group input-group-lg">
-    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-    <input type="text" name="email" class="form-control" placeholder="Email">
-  </div>
-  <div class="input-group input-group-lg clockpicker">
-    <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
-    <input name="message" type="text" class="form-control" placeholder="Message">
-  </div>
-  <input type="submit" class="btn btn-primary btn-lg" value="Submit">
-</form> -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <form action="/users/confirmation" method="POST">
+                    <h4 class="text-center">Reach us right here…</h4>
+                    <div class="input-with-icon col-sm-12">
+                        <i class="icon-MaleFemale"></i>
+                        <input class="validate-required" type="text" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="input-with-icon col-sm-6">
+                        <i class="icon-Email"></i>
+                        <input class="validate-required validate-email" type="email" name="email" placeholder="Email Address">
+                    </div>
+                    <div class="input-with-icon col-sm-6">
+                        <i class="icon-Phone-2"></i>
+                        <input type="tel" name="telephone" placeholder="Phone Number">
+                    </div>
+                    <div class="col-sm-12">
+                        <textarea class="validate-required" name="message" placeholder="Your Message" rows="8"></textarea>
+                    </div>
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn--primary vpe">
+                            Submit Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
-<div class="container">
-
-  <form action="/users/confirmation" method="POST">
-    <div class="field">
-      <label class="label">Name</label>
-      <div class="control has-icons-left has-icons-right">
-        <input class="input" type="text" placeholder="Name" name="name">
-        <span class="icon is-small is-left">
-          <i class="fa fa-user"></i>
-        </span>
-      </div>
-    </div>
-    
-    <div class="field">
-      <label class="label">Email</label>
-      <div class="control has-icons-left has-icons-right">
-        <input class="input" type="email" placeholder="Email" name="email">
-        <span class="icon is-small is-left">
-          <i class="fa fa-envelope"></i>
-        </span>
-        <span className="icon is-small is-right">
-          <i className="fa fa-check"></i>
-        </span>
-      </div>
-    </div>
-    
-    <div class="field">
-      <label class="label">Message</label>
-      <div class="control">
-        <textarea class="textarea" placeholder="Textarea" name="message"></textarea>
-      </div>
-    </div>
-    
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-primary">Submit</button>
-      </div>
-      <div class="control">
-        <button class="button is-link">Cancel</button>
-      </div>
-    </div>
-    </div>
-  </form>
-</div>
-
-<%- include('./_partials/footer') %>
+<%- include('./footer') %>

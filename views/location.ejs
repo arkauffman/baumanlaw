@@ -1,11 +1,27 @@
-<%- include('./_partials/header') %>
-
-    <h1>Phone: 818-285-0222</h1>
-    <h1>Fax: 818-285-0224</h1>
-    <h1>Business Hours: 8:00AM – 5:00PM M-F, By Appointment: Sa-Su</h1>
-    <h1>Address: 16255 Ventura Blvd Suite 450 Encino, CA 91436</h1>
-    <br>
+<%- include('./header') %>
+  <br><br><br><br>
+  <div class="contain">
     <div id="map"></div>
+  </div>
+  <section class="features features-10">
+      <div class="feature bg--white col-md-4 text-center">
+          <i class="icon icon--lg icon-Map-Marker2"></i>
+          <h4>Business Hours</h4>
+          <p>&nbsp;M-F: 8:00AM–5:00PM<br>&nbsp;Sa-Su: By Appointment</p>
+      </div>
+      <div class="feature bg--secondary col-md-4 text-center">
+          <i class="icon icon--lg icon-Phone-2"></i>
+          <h4>Give us a call</h4>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Office: (818) 285-0222 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>Fax: (818)&nbsp;285-0224</p>
+      </div>
+      <div class="feature bg--dark col-md-4 text-center">
+          <i class="icon icon--lg icon-Computer"></i>
+          <h4>Connect online</h4>
+          <p>
+              Email:
+              <a href="#">info@thela-lawyer.com</a><br></p>
+      </div>
+  </section>
 
     <style>
        #map {
@@ -43,4 +59,4 @@
     </script>
    <script src="https://maps.googleapis.com/maps/api/js?key=<%=key%>&libraries=places&callback=initMap" async defer></script>
 
-<%- include('./_partials/footer') %>
+<%- include('./footer') %>
