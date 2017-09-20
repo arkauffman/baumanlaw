@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+.nav.section {
+  padding-top: 10px;
+}
+
+.contain {
+  margin: 80px;
+}

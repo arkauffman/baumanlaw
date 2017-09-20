@@ -1,11 +1,77 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('./_partials/header') %>
+
+<nav class="nav section">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item" href="/">Bauman Law</a>
+      </div>
+      <div class="nav-right nav-menu">
+        <a href="/" class="nav-item is-tab">Home</a>
+        <a href="/"class="nav-item is-tab">Settings</a>
+      </div>
+    </div>
+</nav>
+
+<div class="contain">
+
+<!-- <form method="POST" action="/settings?_method=PUT">
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+    <input id="addressSearch" name="name" class="form-control" placeholder="Name">
+  </div>
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+    <input type="text" name="email" class="form-control" placeholder="Email">
+  </div>
+  <div class="input-group input-group-lg clockpicker">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+    <input name="message" type="text" class="form-control" placeholder="Message">
+  </div>
+  <input type="submit" class="btn btn-primary btn-lg" value="Submit">
+</form> -->
+
+<div class="container">
+
+  <form action="/users/confirmation" method="POST">
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input" type="text" placeholder="Name" name="name">
+        <span class="icon is-small is-left">
+          <i class="fa fa-user"></i>
+        </span>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input" type="email" placeholder="Email" name="email">
+        <span class="icon is-small is-left">
+          <i class="fa fa-envelope"></i>
+        </span>
+        <span className="icon is-small is-right">
+          <i className="fa fa-check"></i>
+        </span>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label class="label">Message</label>
+      <div class="control">
+        <textarea class="textarea" placeholder="Textarea" name="message"></textarea>
+      </div>
+    </div>
+    
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-primary">Submit</button>
+      </div>
+      <div class="control">
+        <button class="button is-link">Cancel</button>
+      </div>
+    </div>
+    </div>
+  </form>
+</div>
+<%- include('./_partials/footer') %>
