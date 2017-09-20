@@ -1,0 +1,46 @@
+<%- include('./_partials/header') %>
+
+    <h1>Phone: 818-285-0222</h1>
+    <h1>Fax: 818-285-0224</h1>
+    <h1>Business Hours: 8:00AM – 5:00PM M-F, By Appointment: Sa-Su</h1>
+    <h1>Address: 16255 Ventura Blvd Suite 450 Encino, CA 91436</h1>
+    <br>
+    <div id="map"></div>
+
+    <style>
+       #map {
+            height: 400px;
+            width: 100%;
+       }
+    </style>
+    <script>
+      function initMap() {
+        var uluru = {lat:34.157551, lng: -118.487565};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: uluru
+        });
+
+        var contentString = 
+        '<div id="content">'+
+            '<p>16255 Ventura Blvd Suite 450 Encino, CA 91436</p>'+
+        '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          title: 'Bauman Law Group'
+        });
+        
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=<%=key%>&libraries=places&callback=initMap" async defer></script>
+
+<%- include('./_partials/footer') %>

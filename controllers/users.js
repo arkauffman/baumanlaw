@@ -45,11 +45,23 @@ function sendEmail(req, res) {
             }
             console.log('message sent!!!!!!!!')
             res.redirect('/');
+            // send a confirmation response
             transporter.close();
         });
     });
 }
 
+function location(req, res) {
+    let key = process.env.GOOGLE_KEY;
+    res.render('location', {key});
+}
+
+function contact(req, res) {
+    res.render('contact');
+}
+
 module.exports = {
-    sendEmail
+    sendEmail,
+    location,
+    contact
 }
