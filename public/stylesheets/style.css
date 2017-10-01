@@ -20,11 +20,13 @@ a {
 }
 
 i {
-  /* padding-right: 10px; */
   font-size: 25px !important;
 }
 
 ul, li {
   list-style-type: none;
-  /* float: left; */
+}
+
+textarea.validate-required {
+  padding: 40px !important;
 }

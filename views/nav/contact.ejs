@@ -1,0 +1,97 @@
+<%- include('./../header') %>
+
+<div class="contain">
+  <div id="map"></div>
+</div>
+
+<section class="features features-10">
+    <div class="feature bg--white col-md-4 text-center">
+        <i class="icon icon--lg icon-Map-Marker2"></i>
+        <h4>Business Hours</h4>
+        <p>&nbsp;M-F: 8:00AM–5:00PM<br>&nbsp;Sa-Su: By Appointment</p>
+    </div>
+    <div class="feature bg--secondary col-md-4 text-center">
+        <i class="icon icon--lg icon-Phone-2"></i>
+        <h4>Give us a call</h4>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Office: (818) 285-0222 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>Fax: (818)&nbsp;285-0224</p>
+    </div>
+    <div class="feature bg--dark col-md-4 text-center">
+        <i class="icon icon--lg icon-Computer"></i>
+        <h4>Connect online</h4>
+        <p>
+            Email:
+            <a href="#">info@thela-lawyer.com</a><br></p>
+    </div>
+</section>
+
+<style>
+   #map {
+        height: 400px;
+        width: 500px;
+        margin: 0 auto;
+   }
+</style>
+<script>
+  function initMap() {
+    var uluru = {lat:34.157551, lng: -118.487565};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: uluru
+    });
+
+    var contentString = 
+    '<div id="content">'+
+        '<p>16255 Ventura Blvd Suite 450 Encino, CA 91436</p>'+
+    '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+      title: 'Bauman Law Group'
+    });
+    
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+</script>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <form action="/confirmation" method="POST">
+                    <h4 class="text-center">Reach us right here…</h4>
+                    <div class="input-with-icon col-sm-12">
+                        <i class="icon-MaleFemale"></i>
+                        <input class="validate-required" type="text" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="input-with-icon col-sm-6">
+                        <i class="icon-Email"></i>
+                        <input class="validate-required validate-email" type="email" name="email" placeholder="Email Address">
+                    </div>
+                    <div class="input-with-icon col-sm-6">
+                        <i class="icon-Phone-2"></i>
+                        <input type="tel" name="telephone" placeholder="Phone Number">
+                    </div>
+                    <div class="col-sm-12">
+                        <textarea class="validate-required" name="message" placeholder="Your Message" rows="8"></textarea>
+                    </div>
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn--primary vpe">
+                            Submit Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%=key%>&libraries=places&callback=initMap" async defer></script>
+
+<%- include('./../footer') %>

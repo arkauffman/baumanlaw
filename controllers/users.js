@@ -21,20 +21,8 @@ function sendEmail(req, res) {
             cc: info.email,
             // this can never change with GMAIL security (have to have a diff provider pass)
             from: process.env.NODEMAILER_USER,
-            subject: 'Website Message',
-            html: `<p>
-                        Message received from: ${info.name} 
-                        <br><br>
-                        They are inquiring about: 
-                        <br><br>
-                        <div class="message">
-                            '${info.message}'
-                        </div>
-                        <br><br>
-                        Contact: ${info.email}, ${info.telephone}
-                        <br><br>
-                        Reply to this email to get in touch with them!
-                    </p>`,
+            subject: `Message from ${info.name}`,
+            html: message.html,
             style: message.css
         }
         console.log('YERJE', mailOptions)
@@ -52,17 +40,97 @@ function sendEmail(req, res) {
     });
 }
 
-function location(req, res) {
+function contact(req, res) {
     let key = process.env.GOOGLE_KEY;
-    res.render('location', {key});
+    res.render('nav/contact', {key});
 }
 
-function contact(req, res) {
-    res.render('contact');
+function attorneys(req, res) {
+    res.render('about/attorneys');
+}
+
+function about(req, res) {
+    res.render('about/about');
+}
+
+function contingencyFees(req, res) {
+    res.render('about/contingencyFees');
+}
+
+function clientTestimonials(req, res) {
+    res.render('about/clientTestimonials');
+}
+
+function referrals(req, res) {
+    res.render('nav/referrals');
+}
+
+function successRecords(req, res) {
+    res.render('nav/successRecords');
+}
+
+function bicycleAccidents(req, res) {
+    res.render('practiceAreas/bicycleAccidents');
+}
+
+function brainInjury(req, res) {
+    res.render('practiceAreas/brainInjury');
+}
+
+function busAccidents(req, res) {
+    res.render('practiceAreas/busAccidents');
+}
+
+function carAccidents(req, res) {
+    res.render('practiceAreas/carAccidents');
+}
+
+function motorcycleAccidents(req, res) {
+    res.render('practiceAreas/motorcycleAccidents');
+}
+
+function pedestrianAccidents(req, res) {
+    res.render('practiceAreas/pedestrianAccidents');
+}
+
+function premisesLiability(req, res) {
+    res.render('practiceAreas/premisesLiability');
+}
+
+function productLiability(req, res) {
+    res.render('practiceAreas/productLiability');
+}
+
+function truckAccidents(req, res) {
+    res.render('practiceAreas/truckAccidents');
+}
+
+function wrongfulDeath(req, res) {
+    res.render('practiceAreas/wrongfulDeath');
+}
+
+function smallClaims(req, res) {
+    res.render('nav/smallClaims');
 }
 
 module.exports = {
     sendEmail,
-    location,
-    contact
+    contact,
+    attorneys,
+    about,
+    contingencyFees,
+    clientTestimonials,
+    referrals,
+    successRecords,
+    bicycleAccidents,
+    brainInjury,
+    busAccidents,
+    carAccidents,
+    motorcycleAccidents,
+    pedestrianAccidents,
+    premisesLiability,
+    productLiability,
+    truckAccidents,
+    wrongfulDeath,
+    smallClaims
 }
