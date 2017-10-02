@@ -1,3 +1,95 @@
 <%- include('./../header') %>
 
+    <div class="main-container">
+        <section class="height-100 cover cover-2">
+            <div class="col-md-6 col-sm-5">
+                <div class="background-image-holder">
+                    <img alt="image" src="images/hero6.jpg">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-7 bg--white text-center">
+                <div class="pos-vertical-center">
+                    <h2>
+                        Bus Accidents
+                    </h2>
+                    <p class="lead">
+                        Blurb &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    </p>
+                    <div class="modal-instance">
+                            <a class="btn modal-trigger" href="#">
+                                <span class="btn__text">
+                                    Request a Consultation
+                                </span>
+                            </a>
+                            <div class="modal-container" data-modal-id="contact-form">
+                                <div class="modal-content" data-width="80%" data-height="80%">
+                                    <div class="pos-vertical-center clearfix">
+                                        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">            
+                                            <div class="col-sm-12">
+                                                <form action="/confirmation" method="POST">
+                                                    <h4 class="text-center" id="modal">Reach us right here…</h4>
+                                                    <div class="input-with-icon col-sm-12">
+                                                        <i class="icon-MaleFemale"></i>
+                                                        <input class="validate-required" type="text" name="name" placeholder="Your Name">
+                                                    </div>
+                                                    <div class="input-with-icon col-sm-6">
+                                                        <i class="icon-Email"></i>
+                                                        <input class="validate-required validate-email" type="email" name="email" placeholder="Email Address">
+                                                    </div>
+                                                    <div class="input-with-icon col-sm-6">
+                                                        <i class="icon-Phone-2"></i>
+                                                        <input type="tel" name="telephone" placeholder="Phone Number">
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <textarea class="validate-required" name="message" placeholder="Your Message" rows="8"></textarea>
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <button type="submit" class="btn btn--primary vpe">
+                                                            Submit
+                                                        </button>
+                                                    </div>
+                                                </form>       
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg--secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h5>Overview</h5>
+                        <p>
+                            Oftentimes, bus drivers drive too fast, needlessly endangering their
+                            passengers, other drivers on the road, and pedestrians. All of those parties
+                            are susceptible to being injured or killed due to that bus driver's negligent driving.
+
+                            If you or someone you love has suffered an injury or has been killed by
+                            the result of a bus driver's negligent behavior, contact our experienced attorneys
+                            who know how to handle specialized cases like this. 
+                        </p>
+                        <h5>Why Us</h5>
+                        <p>
+                            The Bauman Law Firm has successfully handled _____ bus accident cases.
+                            Our attorneys provide ____ from start to finish. We begin building our cases by
+                            obtaining evidence from camera footage in order to disprove bus driver claims.
+                        </p>
+                        
+                        <h5>Next Steps</h5>
+                        <p>
+                            We are prepared to fight for you in order to get the justice you deserve
+                            against the owners of the public or private bus company.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
 <%- include('./../footer') %>

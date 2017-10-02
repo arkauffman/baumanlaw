@@ -16,16 +16,11 @@ router.get('/car-accidents', userCtrl.carAccidents);
 router.get('/motorcycle-accidents', userCtrl.motorcycleAccidents);
 router.get('/pedestrian-accidents', userCtrl.pedestrianAccidents);
 router.get('/premises-liability', userCtrl.premisesLiability);
-router.get('/product-defects', userCtrl.truckAccidents);
+router.get('/product-defects', userCtrl.productDefects);
 router.get('/product-liability', userCtrl.productLiability);
 router.get('/truck-accidents', userCtrl.truckAccidents);
 router.get('/wrongful-death', userCtrl.wrongfulDeath);
 router.get('/small-claims', userCtrl.smallClaims);
-
-
-       
- 
-    
 
 router.post('/confirmation', userCtrl.sendEmail);
 

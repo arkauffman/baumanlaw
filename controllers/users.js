@@ -97,6 +97,10 @@ function premisesLiability(req, res) {
     res.render('practiceAreas/premisesLiability');
 }
 
+function productDefects(req, res) {
+    res.render('practiceAreas/productDefects');
+}
+
 function productLiability(req, res) {
     res.render('practiceAreas/productLiability');
 }
@@ -129,6 +133,7 @@ module.exports = {
     motorcycleAccidents,
     pedestrianAccidents,
     premisesLiability,
+    productDefects,
     productLiability,
     truckAccidents,
     wrongfulDeath,

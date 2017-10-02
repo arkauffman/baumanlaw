@@ -1,3 +1,64 @@
 <%- include('./../header') %>
 
+    <div class="main-container">      
+        <section class="height-80 imagebg cover cover-1 parallax bg--dark section--even" data-overlay="6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <h3>Bauman Law</h3>
+                        <p class="lead">
+                            Our diverse team comprises talent from a range of design disciplines working together to deliver effective solutions.
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="modal-instance">
+                            <a class="btn modal-trigger" href="#">
+                                <span class="btn__text">
+                                    Request a Consultation
+                                </span>
+                            </a>
+                            <div class="modal-container" data-modal-id="contact-form">
+                                <div class="modal-content" data-width="80%" data-height="80%">
+                                    <div class="pos-vertical-center clearfix">
+                                        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">            
+                                            <div class="col-sm-12">
+                                                <form action="/confirmation" method="POST">
+                                                    <h4 class="text-center" id="modal">Reach us right here…</h4>
+                                                    <div class="input-with-icon col-sm-12">
+                                                        <i class="icon-MaleFemale"></i>
+                                                        <input class="validate-required" type="text" name="name" placeholder="Your Name">
+                                                    </div>
+                                                    <div class="input-with-icon col-sm-6">
+                                                        <i class="icon-Email"></i>
+                                                        <input class="validate-required validate-email" type="email" name="email" placeholder="Email Address">
+                                                    </div>
+                                                    <div class="input-with-icon col-sm-6">
+                                                        <i class="icon-Phone-2"></i>
+                                                        <input type="tel" name="telephone" placeholder="Phone Number">
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <textarea class="validate-required" name="message" placeholder="Your Message" rows="8"></textarea>
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <button type="submit" class="btn btn--primary vpe">
+                                                            Submit
+                                                        </button>
+                                                    </div>
+                                                </form>       
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
 <%- include('./../footer') %>

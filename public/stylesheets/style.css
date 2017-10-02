@@ -23,8 +23,36 @@ i {
   font-size: 25px !important;
 }
 
-ul, li {
-  list-style-type: none;
+.nav-bar, .nav-bar.nav--fixed {
+  width: 700px;
+  /* width: 50%; */
+  margin: 0 auto;
+  box-shadow: 0px !important;
+}
+
+#modal {
+  color: white !important;
+}
+
+textarea.validate-required {
+  z-index: inherit !important;
+}
+
+.nav-bar ul, .nav-bar.nav--fixed ul {
+  margin: 0 auto;
+  padding: 0;
+  display:inline-block;
+  list-style: none;
+}
+
+.nav-bar li, .nav-bar.nav--fixed li {
+  display: inline-block;
+}
+
+.nav-bar li a, .nav-bar.nav--fixed li a {
+  display: block;
+  padding: 5px 5px;
+  text-decoration: none;
 }
 
 textarea.validate-required {
