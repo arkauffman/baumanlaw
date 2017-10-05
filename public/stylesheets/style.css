@@ -58,3 +58,18 @@ textarea.validate-required {
 textarea.validate-required {
   padding: 40px !important;
 }
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-home {
+  width: 250px;
+  height: 200px;
+}
+
+.logo-footer {
+  width: 100px;
+  height: 100px;
+}
