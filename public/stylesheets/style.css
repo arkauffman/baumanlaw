@@ -73,3 +73,7 @@ textarea.validate-required {
   width: 100px;
   height: 100px;
 }
+
+body.scroll-assist {
+  color: transparent !important;
+}
