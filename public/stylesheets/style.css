@@ -77,3 +77,7 @@ textarea.validate-required {
 body.scroll-assist {
   color: transparent !important;
 }
+
+p, ul, li {
+  color: grey !important;
+}
