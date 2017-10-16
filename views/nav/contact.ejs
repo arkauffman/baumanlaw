@@ -45,29 +45,30 @@
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
                 <form action="/confirmation" method="POST">
-                    <h4 class="text-center">Reach us right here…</h4>
+                    <h4 class="text-center" id="modal">Reach us right here…</h4>
                     <div class="input-with-icon col-sm-12">
                         <i class="icon-MaleFemale"></i>
                         <input class="validate-required" type="text" name="name" placeholder="Your Name">
                     </div>
                     <div class="input-with-icon col-sm-6">
-                        <i class="icon-Email"></i>
+                        <i class="icon-Address-Book"></i>
                         <input class="validate-required validate-email" type="email" name="email" placeholder="Email Address">
                     </div>
                     <div class="input-with-icon col-sm-6">
                         <i class="icon-Phone-2"></i>
                         <input type="tel" name="telephone" placeholder="Phone Number">
                     </div>
-                    <br>
-                    <div class="col-sm-12">
-                        <textarea class="validate-required" name="message" placeholder="Your Message" rows="8"></textarea>
+                    <div class="input-with-icon col-sm-12">
+                        <i class="icon-Mail"></i>
+                        <input type="text" name="message" placeholder="Message" rows="8">
+                        <!-- <input class="validate-required" name="message" placeholder="Your Message" rows="8"></textarea> -->
                     </div>
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn--primary vpe">
                             Submit
                         </button>
                     </div>
-                </form>
+                </form> 
             </div>
         </div>
     </div>

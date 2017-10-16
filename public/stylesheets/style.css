@@ -78,6 +78,10 @@ body.scroll-assist {
   color: transparent !important;
 }
 
-p, ul, li {
+p, ul, li, textarea, input {
   color: grey !important;
+}
+
+i {
+  color: black !important;
 }
